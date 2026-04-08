@@ -1,49 +1,52 @@
-
 import java.util.Scanner;
 
 public class latian2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String nama;
-        int nilaiKeaktifan, nilaiTugas, nilaiUjian;
+        String nama, grade;
+        double nilaiKeaktifan, nilaiTugas, nilaiUjian;
+        double murniKeaktifan, murniTugas, murniUjian, nilaiAkhir;
 
-        System.out.print("Masukkan Nama Siswa: ");
+        System.out.println("PROGRAM HITUNG NILAI AKHIR");
+        System.out.println("");
+        System.out.print("Nama Siswa      : ");
         nama = input.nextLine();
+        System.out.print("Nilai Keaktifan : ");
+        nilaiKeaktifan = input.nextDouble();
+        System.out.print("Nilai Tugas     : ");
+        nilaiTugas = input.nextDouble();
+        System.out.print("Nilai Ujian     : ");
+        nilaiUjian = input.nextDouble();
 
-        System.out.print("Masukkan Nilai Keaktifan: ");
-        nilaiKeaktifan = input.nextInt();
+        murniKeaktifan = nilaiKeaktifan * 0.20;
+        murniTugas = nilaiTugas * 0.30;
+        murniUjian = nilaiUjian * 0.50;
+        nilaiAkhir = murniKeaktifan + murniTugas + murniUjian;
 
-        System.out.print("Masukkan Nilai Tugas: ");
-        nilaiTugas = input.nextInt();
-
-        System.out.print("Masukkan Nilai Ujian: ");
-        nilaiUjian = input.nextInt();
-
-        int nilaiMurniKeaktifan = nilaiKeaktifan * 20/100;
-        int nilaiMurniTugas = nilaiTugas * 30/100;
-        int nilaiMurniUjian = nilaiUjian * 50/100;
-        int nilaiAkhir = nilaiMurniKeaktifan + nilaiMurniTugas + nilaiMurniUjian;
-        
-
-        if(nilaiAkhir >= 80) {
-            System.out.println(nama + " Mendapatkan Grade A");
+        if (nilaiAkhir >= 80) {
+            grade = "A";
         } else if (nilaiAkhir >= 70) {
-            System.out.println(nama + " Mendapatkan Grade B");
-        } else if (nilaiAkhir >= 60) {
-            System.out.println(nama + " Mendapatkan Grade C");
+            grade = "B";
+        } else if (nilaiAkhir >= 59) {
+            grade = "C";
         } else if (nilaiAkhir >= 50) {
-            System.out.println(nama + " Mendapatkan Grade D");
+            grade = "D";
         } else {
-            System.out.println(nama + " Mendapatkan Grade E");
+            grade = "E";
         }
 
-        System.out.println("Siswa bernama " + nama + " dengan nilai yang di Hasilkan " );
-        System.out.println("Nilai Keaktifan * 20%: " + nilaiMurniKeaktifan);
-        System.out.println("Nilai Tugas * 30%: " + nilaiMurniTugas);
-        System.out.println("Nilai Ujian * 50%: " + nilaiMurniUjian);
+        System.out.println("\nSiswa yang bernama " + nama);
+        System.out.println("Dengan Nilai Persentasi Yang dihasilkan.");
+        System.out.println("Nilai Keaktifan * 20% : " + murniKeaktifan);
+        System.out.println("Nilai Tugas     * 30% : " + murniTugas);
+        System.out.println("Nilai Ujian     * 50% : " + murniUjian);
+        System.out.println("");
+        System.out.print("Jadi Siswa yang bernama " + nama);
+        System.out.println(" memperoleh nilai akhir sebesar " + nilaiAkhir);
+        System.out.println("");
+        System.out.println("Grade nilai yang didapat adalah " + grade);
 
-        System.out.println("jadi siswa yang bernama " + nama + " memperoleh nilai akhir Sebesar " + nilaiAkhir + "Grade Nilai Yang di dapat adalah " + nilaiAkhir);
-
+        input.close();
     }
 }

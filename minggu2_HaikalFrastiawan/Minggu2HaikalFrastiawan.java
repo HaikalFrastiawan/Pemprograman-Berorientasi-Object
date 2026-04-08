@@ -1,6 +1,4 @@
 
-    package minggu2.haikalfrastiawan;
-
     import java.util.Scanner;
     public class Minggu2HaikalFrastiawan {
 
