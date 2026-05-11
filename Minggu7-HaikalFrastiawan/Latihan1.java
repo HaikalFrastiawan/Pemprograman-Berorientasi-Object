@@ -12,7 +12,7 @@ class Lingkaran {
         return 2 * Math.PI * radius;
     }
 }
-public class Main {
+public class Latihan1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Masukkan jari-jari lingkaran: ");
