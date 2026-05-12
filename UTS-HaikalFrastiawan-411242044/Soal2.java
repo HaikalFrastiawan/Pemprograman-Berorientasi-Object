@@ -11,7 +11,7 @@ public class Soal2 {
             System.out.println("====================================================");
 
             System.out.print("Masukkan Jumlah Mahasiswa: ");
-            int jumlah = input.nextInt()
+            int jumlah = input.nextInt();
             String[] nama = new String[jumlah];
             double[] nTugas = new double[jumlah], nUTS = new double[jumlah], nUAS = new double[jumlah], nAkhir = new double[jumlah];
             char[] grade = new char[jumlah];
